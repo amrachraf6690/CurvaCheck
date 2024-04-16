@@ -29,7 +29,7 @@ class MainController extends Controller
         $response_body = json_encode($response_body);
 
 
-        if (Str::contains($response_body, 'Invalid Credentials.')) {
+        if (Str::contains($response_body, 'Invalid Credentials')) {
             return view('fail',compact('email'));
         }
         elseif(Str::contains($response_body, 'The selected email is invalid.'))
