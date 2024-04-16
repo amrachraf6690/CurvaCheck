@@ -34,23 +34,27 @@
 
                     <div class="row mt-8 flex justify-center text-center">
                         <div class="">
-                            <div class="max-w-md w-full bg-white bg-opacity-40 shadow-md rounded-lg p-12">
-                                <form action="" method="POST">
-                                    @csrf
-                                    <div class="mb-4">
-                                        <label for="email" class="block text-gray-100 mb-6">حط ايميلك يا جميل و شوف كده الدنيا</label>
-                                        <input type="text" id="email" name="email" class="form-input mt-1 p-4 block w-full rounded-md border @error('email') border-red-500 @else border-gray-300 @enderror text-black shadow-sm">
-                                        @error('email')
-                                        <div class="text-red-500 mt-2">
-                                            {{ $message }}
-                                        </div>
-                                        @enderror
+                            <div class="max-w-md w-full bg-white bg-opacity-40 shadow-md rounded-lg p-12 relative">
+                                <p class="muted">{{ $email }}</p>
+                                <h1 class="text-white mt-2 mb-2 text-2xl">للاسف انت ف مشكلة</h1>
+                                <hr class="bg-gradient-to-r from-transparent via-white to-transparent">
+                                <p class="text-white mt-2 mb-2 text-xl underline">أعمل ايه؟</p>
+                                <p class="text-white mt-2 mb-2">إدخل علي أي موقع انت مسجل عليه بنفس الباسورد اللي كنت عامله ف موقع كورڤا و غير الباسورد</p>
+                                <p class="text-white mt-2 mb-2">ولو الموقع بيدعم المصادقة الثنائية فعلها</p>
+                                <div class="mt-4">
+                                    <hr class="bg-gradient-to-r from-transparent via-white to-transparent">
+                                    <div class="border-2 border-white rounded mt-3">
+                                        <iframe class="inset-0 w-full h-full" src="https://www.youtube.com/embed/_1GFZJPWTCE" frameborder="0" allowfullscreen></iframe>
                                     </div>
-                                    <button type="submit" class="bg-black text-white py-2 px-4 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-indigo-600">نشوف كده</button>
-                                </form>
+                                </div>
+                                <hr class="bg-gradient-to-r from-transparent via-white to-transparent mt-3 mb-3">
+                                <a href={{ route('index') }}>
+                                    <button class="bg-black text-white py-2 px-4 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-indigo-600">  جرب ايميل تاني</button>
+                                </a>
                             </div>
                         </div>
                     </div>
+
 
                     <footer class="py-16 text-center text-sm text-black dark:text-white/70">
                         تم صنعه بكل الحب من قبل <a href="https://wa.me/+201028751528" target="_blank" class="underline hover:text-black/70 dark:hover:text-white/70">عمرو أشرف</a>
